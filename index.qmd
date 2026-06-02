@@ -117,10 +117,9 @@ Of course I am not the first genius that thought about it. There has been studie
 
 One of the paper looks into the screening process of the review. By using GPT3.5, they have showed more than 80% accuracy.
 
-Another study used Claude 2 for data extraction. In that paper, they extracted data elements including first and last name of the authors, number of patients in control and treatment groups ect from 10 papers. 
+Another study used Claude 2 for data extraction. In that paper, they extracted data elements including first and last name of the authors, number of patients in control and treatment groups ect from 10 papers.
 
-Larger sample should be tested for accuracy from LLMs on data extraction. 
-
+Larger sample should be tested for accuracy from LLMs on data extraction.
 :::
 
 ## [Example of a systematic review and meta-analysis]{auto-animate="true"}
@@ -185,23 +184,7 @@ We will use the builtin function in this package to separate the list of abstrac
 The training set will be used in the first and second apps for prompt engineering and model selection, the testing set will be use for bath processing and validation.
 :::
 
-## [Another commercial product [Elicit](https://elicit.com)]{auto-animate="true"}
 
-::::: columns
-::: column
--   What is [Elicit](https://elicit.com): an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.
-
--   Designed to assist systematic reviews.
-
--   Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.
-:::
-
-::: column
-<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
-
-</iframe>
-:::
-:::::
 
 ## [Demo]{auto-animate="true"}
 
@@ -287,12 +270,18 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 ## [Reference]{auto-animate="true"}
 
+[1]: Luo, R., Sastimoglu, Z., Faisal, A. I., & Deen, M. J. (2024). Evaluating the efficacy of large language models for systematic review and meta-analysis screening. medrxiv, 2024-06.
+
+[2]: Gartlehner, G., Kahwati, L., Hilscher, R., Thomas, I., Kugley, S., Crotty, K., ... & Chew, R. (2024). Data extraction for evidence synthesis using a large language model: A proof‐of‐concept study. Research synthesis methods, 15(4), 576-589.
+
 ## [Stay in touch]{auto-animate="true"}
 
 ::: {style="text-align:center;"}
-<img src="https://media.giphy.com/media/RiykPw9tgdOylwFgUe/giphy.gif" style="width:30%"/>
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXJ6OTJ2ZzFsa3g4aG5ka3Yzc3Fmd2w3OThja3Z1eWllcGRzdWd5ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Av9l0VIc01y1isrDw/giphy.gif" style="width:30%"/>
 :::
 
 [danyan.dai01\@gmail.com](mailto:danyan.dai01@gmail.com)
 
 <https://www.linkedin.com/in/danyang-dai-7529b4152/>
+
+[Github: @DanyangDai](https://github.com/DanyangDai)
