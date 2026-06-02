@@ -3,7 +3,7 @@ pagetitle: "metaextractoR: An R Package for Streamlined Data Extraction in Syste
 author: "Danyang Dai"
 date: "4th of June"
 host: "MRC Biostatistics Unit"
-institute: "The University of Queensland / King's College London"
+institute: "The University of Queensland & King's College London"
 strip-comments: true
 format: 
   revealjs:
@@ -89,8 +89,6 @@ Hello everybody. Thank you for coming today.I am Daidai and I am a third year Ph
 Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis.
 :::
 
-
-
 ## [What is Systematic Review?]{auto-animate="true"}
 
 -   A structured, comprehensive method for identifying and summarising all available evidence on a specific research question.
@@ -100,11 +98,29 @@ Today, I will be showcasing my very first R package that utilise Large Language 
 -   ![](images/SR_steps.png){fig-align="center"}
 
 ::: notes
-Systematic review and meta-analysis might not be a familiar term for many of you. They are widely regarded as the "gold standard" for generating high-quality evidence to inform clinical practice and policy decisions.
+:::
 
-The steps includes topic selection, conceptualised and create protocol, searching for studies,screening for studies,appraise studies, data extraction, synthesis and interpret results.
+## Use of LLM in systematic review
 
-This might still be quite abstract to you, so let me show you an example.
+-   Conducting systematic reviews and meta‑analyses is labour‑intensive.
+
+-   Several studies have explored adopting LLMs and AI within the review process.
+
+-   For example: GPT 3.5 was used in the **screening** process and showed more than 80% of accuracy \[1\].
+
+-   For example: Claude 2 was used in the **data extraction** process and showed an overall 96.3% accuracy \[2\].
+
+-   More resources on the use of AI and LLM in systematic review by Cochrane: [Collection: Artificial Intelligence (AI) methods in evidence synthesis](https://www.cochrane.org/learn/webinars/collection/2929)
+
+::: notes
+Of course I am not the first genius that thought about it. There has been studies done that evaluated the use of LLM in systematic reviews at different stages of the review.
+
+One of the paper looks into the screening process of the review. By using GPT3.5, they have showed more than 80% accuracy.
+
+Another study used Claude 2 for data extraction. In that paper, they extracted data elements including first and last name of the authors, number of patients in control and treatment groups ect from 10 papers. 
+
+Larger sample should be tested for accuracy from LLMs on data extraction. 
+
 :::
 
 ## [Example of a systematic review and meta-analysis]{auto-animate="true"}
@@ -133,6 +149,24 @@ This is a very manual process as you can see, it requires a lot of human effort.
 For a more robust process, dual extraction is required sometime. This means that this process will be done twice by two individuals.
 :::
 
+## Another commercial product [Elicit](https://elicit.com)
+
+::::: columns
+::: column
+-   What is [Elicit](https://elicit.com): an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.
+
+-   Designed to assist systematic reviews.
+
+-   Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.
+:::
+
+::: column
+<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
+
+</iframe>
+:::
+:::::
+
 ## [Design of metaextractoR]{auto-animate="true"}
 
 ![](images/flowchat.png){fig-align="center" width="1400" height="600"}
@@ -144,12 +178,30 @@ The workflow is designed around the Cochrane systematic review guidelines, and i
 
 We’ve also created three Shiny apps that give users an easy, intuitive interface, so anyone can extract data with the help of LLMs—without much coding background.
 
-The first step is load in the list of abstracts included for your systematic reivew and meta-analysis.
+The first step is load in the list of abstracts included for your systematic review and meta-analysis.
 
-We will use the buidin function in this package to separate the list of abstracts into training and testing set.
+We will use the builtin function in this package to separate the list of abstracts into training and testing set.
 
 The training set will be used in the first and second apps for prompt engineering and model selection, the testing set will be use for bath processing and validation.
 :::
+
+## [Another commercial product [Elicit](https://elicit.com)]{auto-animate="true"}
+
+::::: columns
+::: column
+-   What is [Elicit](https://elicit.com): an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.
+
+-   Designed to assist systematic reviews.
+
+-   Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.
+:::
+
+::: column
+<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
+
+</iframe>
+:::
+:::::
 
 ## [Demo]{auto-animate="true"}
 
@@ -207,8 +259,6 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 </p>
 
-
-
 ## [Github and Installation]{auto-animate="true"}
 
 `r fa_list(c("fa-solid fa-globe" = "https://danyangdai.github.io/metaextractoR/","fa-solid fa-code-branch" = "Collaborate at: https://github.com/DanyangDai/metaextractoR"))`
@@ -234,6 +284,8 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 :::
 :::::
 :::::::::
+
+## [Reference]{auto-animate="true"}
 
 ## [Stay in touch]{auto-animate="true"}
 

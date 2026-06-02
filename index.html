@@ -137,7 +137,7 @@
 <h2>
 metaextractoR: An R Package for Streamlined Data Extraction in Systematic Reviews and Meta-Analyses
 </h2>
-<p>👩🏻‍💻 <span class="author">Danyang Dai @ The University of Queensland / King’s College London</span></p>
+<p>👩🏻‍💻 <span class="author">Danyang Dai @ The University of Queensland &amp; King’s College London</span></p>
 <div style="overflow: hidden; height: 1.2em;">
 <ul class="content__container__list center" style="text-align: center">
 <li class="content__container__list__item">
@@ -186,9 +186,33 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 </div></li>
 </ul>
 <aside class="notes">
-<p>Systematic review and meta-analysis might not be a familiar term for many of you. They are widely regarded as the “gold standard” for generating high-quality evidence to inform clinical practice and policy decisions.</p>
-<p>The steps includes topic selection, conceptualised and create protocol, searching for studies,screening for studies,appraise studies, data extraction, synthesis and interpret results.</p>
-<p>This might still be quite abstract to you, so let me show you an example.</p>
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="use-of-llm-in-systematic-review" class="slide level2">
+<h2>Use of LLM in systematic review</h2>
+<ul>
+<li class="fragment"><p>Conducting systematic reviews and meta‑analyses is labour‑intensive.</p></li>
+<li class="fragment"><p>Several studies have explored adopting LLMs and AI within the review process.</p></li>
+<li class="fragment"><p>For example: GPT 3.5 was used in the <strong>screening</strong> process and showed more than 80% of accuracy [1].</p></li>
+<li class="fragment"><p>For example: Claude 2 was used in the <strong>data extraction</strong> process and showed an overall 96.3% accuracy [2].</p></li>
+<li class="fragment"><p>More resources on the use of AI and LLM in systematic review by Cochrane: <a href="https://www.cochrane.org/learn/webinars/collection/2929">Collection: Artificial Intelligence (AI) methods in evidence synthesis</a></p></li>
+</ul>
+<aside class="notes">
+<p>Of course I am not the first genius that thought about it. There has been studies done that evaluated the use of LLM in systematic reviews at different stages of the review.</p>
+<p>One of the paper looks into the screening process of the review. By using GPT3.5, they have showed more than 80% accuracy.</p>
+<p>Another study used Claude 2 for data extraction. In that paper, they extracted data elements including first and last name of the authors, number of patients in control and treatment groups ect from 10 papers.</p>
+<p>Larger sample should be tested for accuracy from LLMs on data extraction.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -244,6 +268,20 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
           display:block!important;
       }</style></aside>
 </section>
+<section id="another-commercial-product-elicit" class="slide level2">
+<h2>Another commercial product <a href="https://elicit.com">Elicit</a></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment"><p>What is <a href="https://elicit.com">Elicit</a>: an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.</p></li>
+<li class="fragment"><p>Designed to assist systematic reviews.</p></li>
+<li class="fragment"><p>Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.</p></li>
+</ul>
+</div><div class="column">
+<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
+</iframe>
+</div></div>
+</section>
 <section id="design-of-metaextractor" class="slide level2">
 <h2><span data-auto-animate="true">Design of metaextractoR</span></h2>
 <div class="quarto-figure quarto-figure-center">
@@ -255,8 +293,8 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 <p>Because data extraction can be incredibly labour-intensive, we wanted a way to streamline the process. So we built an R package called metaextractoR, which uses large language models to help automate parts of data extraction and reduce the manual workload.</p>
 <p>The workflow is designed around the Cochrane systematic review guidelines, and importantly, it keeps humans in the loop at every step to make sure the output stays accurate and reliable.</p>
 <p>We’ve also created three Shiny apps that give users an easy, intuitive interface, so anyone can extract data with the help of LLMs—without much coding background.</p>
-<p>The first step is load in the list of abstracts included for your systematic reivew and meta-analysis.</p>
-<p>We will use the buidin function in this package to separate the list of abstracts into training and testing set.</p>
+<p>The first step is load in the list of abstracts included for your systematic review and meta-analysis.</p>
+<p>We will use the builtin function in this package to separate the list of abstracts into training and testing set.</p>
 <p>The training set will be used in the first and second apps for prompt engineering and model selection, the testing set will be use for bath processing and validation.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -269,6 +307,20 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="another-commercial-product-elicit-1" class="slide level2">
+<h2><span data-auto-animate="true">Another commercial product <a href="https://elicit.com">Elicit</a></span></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment"><p>What is <a href="https://elicit.com">Elicit</a>: an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.</p></li>
+<li class="fragment"><p>Designed to assist systematic reviews.</p></li>
+<li class="fragment"><p>Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.</p></li>
+</ul>
+</div><div class="column">
+<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
+</iframe>
+</div></div>
 </section>
 <section id="demo" class="slide level2">
 <h2><span data-auto-animate="true">Demo</span></h2>
@@ -455,6 +507,9 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 <p><i class="fa-brands fa-youtube fa-2x"></i></p>
 </div>
 </div></div>
+</section>
+<section id="reference" class="slide level2">
+<h2><span data-auto-animate="true">Reference</span></h2>
 </section>
 <section id="stay-in-touch" class="slide level2">
 <h2><span data-auto-animate="true">Stay in touch</span></h2>
