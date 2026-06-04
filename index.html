@@ -160,7 +160,7 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 <p><span class="rladies-purple">4th of June</span> <span class="rladies-purple">MRC Biostatistics Unit</span></p>
 </div>
 <aside class="notes">
-<p>Hello everybody. Thank you for coming today.I am Daidai and I am a third year PhD student from the University of Queensland. I’m in the final stages of my PhD, graduating mid-next year, and I’m starting to look ahead to my next chapter.</p>
+<p>Hello everybody. Thank you for coming today.I am Daidai and I just submitted my PhD thesis this week. I am from the University of Queensland and currently conducting research on metabolic disease among patients with severe mental disease at King’s College London at the moment.</p>
 <p>Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -186,7 +186,8 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 </div></li>
 </ul>
 <aside class="notes">
-
+<p>A brief introduction on systematic review, it is a structured, comprehensive method for identifying and summarising all available evidence on a specific research question.</p>
+<p>Systematic reviews and meta-analysis are pillars of evidence-based medicine.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -209,6 +210,7 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 <li class="fragment"><p>More resources on the use of AI and LLM in systematic review by Cochrane: <a href="https://www.cochrane.org/learn/webinars/collection/2929">Collection: Artificial Intelligence (AI) methods in evidence synthesis</a></p></li>
 </ul>
 <aside class="notes">
+<p>For researchers who have done systematic review and meta-analysis, I am sure you find it can be quite labour-intensive.</p>
 <p>Of course I am not the first genius that thought about it. There has been studies done that evaluated the use of LLM in systematic reviews at different stages of the review.</p>
 <p>One of the paper looks into the screening process of the review. By using GPT3.5, they have showed more than 80% accuracy.</p>
 <p>Another study used Claude 2 for data extraction. In that paper, they extracted data elements including first and last name of the authors, number of patients in control and treatment groups ect from 10 papers.</p>
@@ -225,26 +227,19 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
           display:block!important;
       }</style></aside>
 </section>
-<section id="example-of-a-systematic-review-and-meta-analysis" class="slide level2">
-<h2><span data-auto-animate="true">Example of a systematic review and meta-analysis</span></h2>
-<iframe src="https://jogh.org/2025/jogh-15-04166" width="1200" height="600" style="border:none;">
+<section id="a-commercial-product-elicit" class="slide level2">
+<h2>A Commercial product <a href="https://elicit.com">Elicit</a></h2>
+<div class="columns">
+<div class="column">
+<ul>
+<li class="fragment"><p>What is <a href="https://elicit.com">Elicit</a>: an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.</p></li>
+<li class="fragment"><p>Designed to assist systematic reviews.</p></li>
+<li class="fragment"><p>Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.</p></li>
+</ul>
+</div><div class="column">
+<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
 </iframe>
-<aside class="notes">
-<p>In this systematic review and meta-analysis, we set out to understand the true prevalence of COVID-associated acute kidney injury. Yes—you heard that right. Acute kidney injury, or AKI, is actually one of the more common complications seen in hospitalised COVID patients. It refers to a sudden loss of kidney function, typically detected through changes in serum creatinine.</p>
-<p>What sparked this project was a simple question: why do published AKI prevalence vary so dramatically? When I looked into the literature, I found reported prevalence ranging anywhere from 1% to 70%. So, we undertook this systematic review and meta-analysis to bring clarity to the global picture—examining where and why COVID-associated AKI rates differ, and uncovering geographic and socioeconomic patterns that may explain these disparities.</p>
-<p>In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper.</p>
-<p>To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clincial settings on wheather this is an ICU only cohort or not.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+</div></div>
 </section>
 <section id="data-extraction---covidence" class="slide level2">
 <h2><span data-auto-animate="true">Data extraction - Covidence</span></h2>
@@ -267,20 +262,6 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
-<section id="another-commercial-product-elicit" class="slide level2">
-<h2>Another commercial product <a href="https://elicit.com">Elicit</a></h2>
-<div class="columns">
-<div class="column">
-<ul>
-<li class="fragment"><p>What is <a href="https://elicit.com">Elicit</a>: an AI‑powered research assistant to help researchers find, organise, and extract information from academic literature.</p></li>
-<li class="fragment"><p>Designed to assist systematic reviews.</p></li>
-<li class="fragment"><p>Functionality includes literature searches, screening, summarisation, classification, data extraction, and report generation.</p></li>
-</ul>
-</div><div class="column">
-<iframe src="https://elicit.com" width="800" height="600" style="border:none;">
-</iframe>
-</div></div>
 </section>
 <section id="design-of-metaextractor" class="slide level2">
 <h2><span data-auto-animate="true">Design of metaextractoR</span></h2>
@@ -308,6 +289,27 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
           display:block!important;
       }</style></aside>
 </section>
+<section id="example-of-a-systematic-review-and-meta-analysis" class="slide level2">
+<h2><span data-auto-animate="true">Example of a systematic review and meta-analysis</span></h2>
+<iframe src="https://jogh.org/2025/jogh-15-04166" width="1200" height="600" style="border:none;">
+</iframe>
+<aside class="notes">
+<p>In this systematic review and meta-analysis, we set out to understand the true prevalence of COVID-associated acute kidney injury. Yes—you heard that right. Acute kidney injury, or AKI, is actually one of the more common complications seen in hospitalised COVID patients. It refers to a sudden loss of kidney function, typically detected through changes in serum creatinine.</p>
+<p>What sparked this project was a simple question: why do published AKI prevalence vary so dramatically? When I looked into the literature, I found reported prevalence ranging anywhere from 1% to 70%. So, we undertook this systematic review and meta-analysis to bring clarity to the global picture—examining where and why COVID-associated AKI rates differ, and uncovering geographic and socioeconomic patterns that may explain these disparities.</p>
+<p>In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper.</p>
+<p>To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clinical settings on whether this is an ICU only cohort or not.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="demo" class="slide level2">
 <h2><span data-auto-animate="true">Demo</span></h2>
 
@@ -318,13 +320,13 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 <caption>For all LLMs, the model temperature was set to 0.</caption>
 <colgroup>
 <col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 11%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -506,7 +508,7 @@ metaextractoR: An R Package for Streamlined Data Extraction in Systematic Review
 </div>
 <p><a href="mailto:danyan.dai01@gmail.com">danyan.dai01@gmail.com</a></p>
 <p><a href="https://www.linkedin.com/in/danyang-dai-7529b4152/" class="uri">https://www.linkedin.com/in/danyang-dai-7529b4152/</a></p>
-<p><a href="https://github.com/DanyangDai">Github: <span class="citation" data-cites="DanyangDai">@DanyangDai</span></a></p>
+<p><a href="https://github.com/DanyangDai">Github: @DanyangDai</a></p>
 
 </section>
     </div>
