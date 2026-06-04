@@ -84,7 +84,7 @@ detach_package <- function(pkg, character.only = FALSE)
 :::
 
 ::: notes
-Hello everybody. Thank you for coming today.I am Daidai and I am a third year PhD student from the University of Queensland. I’m in the final stages of my PhD, graduating mid-next year, and I’m starting to look ahead to my next chapter.
+Hello everybody. Thank you for coming today.I am Daidai and I just submitted my PhD thesis this week. I am from the University of Queensland and currently conducting research on metabolic disease among patients with severe mental disease at King's College London at the moment. 
 
 Today, I will be showcasing my very first R package that utilise Large Language Models to extract data for systematic review and meta-analysis.
 :::
@@ -98,6 +98,11 @@ Today, I will be showcasing my very first R package that utilise Large Language 
 -   ![](images/SR_steps.png){fig-align="center"}
 
 ::: notes
+
+A brief introduction on systematic review, it is a structured, comprehensive method for identifying and summarising all available evidence on a specific research question. 
+
+Systematic reviews and meta-analysis are pillars of evidence-based medicine. 
+
 :::
 
 ## Use of LLM in systematic review
@@ -113,6 +118,9 @@ Today, I will be showcasing my very first R package that utilise Large Language 
 -   More resources on the use of AI and LLM in systematic review by Cochrane: [Collection: Artificial Intelligence (AI) methods in evidence synthesis](https://www.cochrane.org/learn/webinars/collection/2929)
 
 ::: notes
+
+For researchers who have done systematic review and meta-analysis, I am sure you find it can be quite labour-intensive.  
+
 Of course I am not the first genius that thought about it. There has been studies done that evaluated the use of LLM in systematic reviews at different stages of the review.
 
 One of the paper looks into the screening process of the review. By using GPT3.5, they have showed more than 80% accuracy.
@@ -122,33 +130,9 @@ Another study used Claude 2 for data extraction. In that paper, they extracted d
 Larger sample should be tested for accuracy from LLMs on data extraction.
 :::
 
-## [Example of a systematic review and meta-analysis]{auto-animate="true"}
 
-<iframe src="https://jogh.org/2025/jogh-15-04166" width="1200" height="600" style="border:none;">
 
-</iframe>
-
-::: notes
-In this systematic review and meta-analysis, we set out to understand the true prevalence of COVID-associated acute kidney injury. Yes—you heard that right. Acute kidney injury, or AKI, is actually one of the more common complications seen in hospitalised COVID patients. It refers to a sudden loss of kidney function, typically detected through changes in serum creatinine.
-
-What sparked this project was a simple question: why do published AKI prevalence vary so dramatically? When I looked into the literature, I found reported prevalence ranging anywhere from 1% to 70%. So, we undertook this systematic review and meta-analysis to bring clarity to the global picture—examining where and why COVID-associated AKI rates differ, and uncovering geographic and socioeconomic patterns that may explain these disparities.
-
-In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper.
-
-To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clincial settings on wheather this is an ICU only cohort or not.
-:::
-
-## [Data extraction - Covidence]{auto-animate="true"}
-
-[![](images/covidence.png){fig-align="center"}](https://app.covidence.org/sign_in)
-
-::: notes
-This is a very manual process as you can see, it requires a lot of human effort.
-
-For a more robust process, dual extraction is required sometime. This means that this process will be done twice by two individuals.
-:::
-
-## Another commercial product [Elicit](https://elicit.com)
+## A Commercial product [Elicit](https://elicit.com)
 
 ::::: columns
 ::: column
@@ -165,6 +149,16 @@ For a more robust process, dual extraction is required sometime. This means that
 </iframe>
 :::
 :::::
+
+## [Data extraction - Covidence]{auto-animate="true"}
+
+[![](images/covidence.png){fig-align="center"}](https://app.covidence.org/sign_in)
+
+::: notes
+This is a very manual process as you can see, it requires a lot of human effort.
+
+For a more robust process, dual extraction is required sometime. This means that this process will be done twice by two individuals.
+:::
 
 ## [Design of metaextractoR]{auto-animate="true"}
 
@@ -184,7 +178,21 @@ We will use the builtin function in this package to separate the list of abstrac
 The training set will be used in the first and second apps for prompt engineering and model selection, the testing set will be use for bath processing and validation.
 :::
 
+## [Example of a systematic review and meta-analysis]{auto-animate="true"}
 
+<iframe src="https://jogh.org/2025/jogh-15-04166" width="1200" height="600" style="border:none;">
+
+</iframe>
+
+::: notes
+In this systematic review and meta-analysis, we set out to understand the true prevalence of COVID-associated acute kidney injury. Yes—you heard that right. Acute kidney injury, or AKI, is actually one of the more common complications seen in hospitalised COVID patients. It refers to a sudden loss of kidney function, typically detected through changes in serum creatinine.
+
+What sparked this project was a simple question: why do published AKI prevalence vary so dramatically? When I looked into the literature, I found reported prevalence ranging anywhere from 1% to 70%. So, we undertook this systematic review and meta-analysis to bring clarity to the global picture—examining where and why COVID-associated AKI rates differ, and uncovering geographic and socioeconomic patterns that may explain these disparities.
+
+In this systematic review and meta-analysis, we observed a clear pattern: COVID-associated AKI higher in high-income countries, and substantially lower in low- and lower-middle-income countries. For more information, please see the paper.
+
+To arrive at this finding, we extracted data from over 300 published studies using Covidence. And in case you’re not familiar with Covidence, let me show you a quick example of how it works. The most important information we need was the number of patients included in each study, the number of AKI patients, clinical settings on whether this is an ICU only cohort or not.
+:::
 
 ## [Demo]{auto-animate="true"}
 
@@ -270,9 +278,9 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 ## [Reference]{auto-animate="true"}
 
-[1]: Luo, R., Sastimoglu, Z., Faisal, A. I., & Deen, M. J. (2024). Evaluating the efficacy of large language models for systematic review and meta-analysis screening. medrxiv, 2024-06.
+\[1\]: Luo, R., Sastimoglu, Z., Faisal, A. I., & Deen, M. J. (2024). Evaluating the efficacy of large language models for systematic review and meta-analysis screening. medrxiv, 2024-06.
 
-[2]: Gartlehner, G., Kahwati, L., Hilscher, R., Thomas, I., Kugley, S., Crotty, K., ... & Chew, R. (2024). Data extraction for evidence synthesis using a large language model: A proof‐of‐concept study. Research synthesis methods, 15(4), 576-589.
+\[2\]: Gartlehner, G., Kahwati, L., Hilscher, R., Thomas, I., Kugley, S., Crotty, K., ... & Chew, R. (2024). Data extraction for evidence synthesis using a large language model: A proof‐of‐concept study. Research synthesis methods, 15(4), 576-589.
 
 ## [Stay in touch]{auto-animate="true"}
 
@@ -284,4 +292,4 @@ Prof. Jason Pole [j.pole\@uq.edu.au](j.pole@uq.edu.au)
 
 <https://www.linkedin.com/in/danyang-dai-7529b4152/>
 
-[Github: @DanyangDai](https://github.com/DanyangDai)
+[Github: \@DanyangDai](https://github.com/DanyangDai)
